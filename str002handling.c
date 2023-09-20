@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
- * _strdup - 
- * @s: 
- * Return: 
+ * _strdup - Duplicate a string in memory.
+ *
+ * @s: The string to duplicate.
+ *
+ * Return: Pointer to the newly allocated string or NULL on failure.
  */
 char *_strdup(const char *s)
 {
@@ -19,9 +21,11 @@ char *_strdup(const char *s)
 }
 
 /**
- * _strlen - 
- * @s: 
- * Return: 
+ * _strlen - Calculate the length of a string.
+ *
+ * @s: The string to measure.
+ *
+ * Return: The length of the string.
  */
 int _strlen(const char *s)
 {
@@ -33,12 +37,14 @@ int _strlen(const char *s)
 	return (len);
 }
 
+
 /**
- * cmp_chars - 
- * @str: 
- * @delim: 
+ * cmp_chars - Compare characters in a string with a delimiter.
  *
- * Return: 
+ * @str: The string to compare.
+ * @delim: The delimiter string to compare against.
+ *
+ * Return: 1 if all characters in str match any character in delim, 0 otherwise.
  */
 int cmp_chars(char str[], const char *delim)
 {
@@ -61,11 +67,12 @@ int cmp_chars(char str[], const char *delim)
 }
 
 /**
- * _strtok - 
- * @str: 
- * @delim: 
+ * _strtok - Split a string into tokens based on a delimiter.
  *
- * Return: 
+ * @str: The string to tokenize.
+ * @delim: The delimiter string to use for tokenization.
+ *
+ * Return: Pointer to the next token in the string, or NULL if no more tokens.
  */
 char *_strtok(char str[], const char *delim)
 {
@@ -111,10 +118,11 @@ char *_strtok(char str[], const char *delim)
 }
 
 /**
- * _isdigit - 
+ * _isdigit - Check if a string consists of only digits.
  *
- * @s: 
- * Return: 
+ * @s: The string to check.
+ *
+ * Return: 1 if the string contains only digits, 0 otherwise.
  */
 int _isdigit(const char *s)
 {
