@@ -1,12 +1,11 @@
 #include "shell.h"
 
 /**
- * _memcpy - 
- * @newptr: 
- * @ptr: 
- * @size: 
+ * _memcpy - Copy a block of memory from one location to another.
  *
- * Return: 
+ * @newptr: Pointer to the destination memory location.
+ * @ptr: Pointer to the source memory location.
+ * @size: Number of bytes to copy.
  */
 void _memcpy(void *newptr, const void *ptr, unsigned int size)
 {
@@ -19,12 +18,13 @@ void _memcpy(void *newptr, const void *ptr, unsigned int size)
 }
 
 /**
- * _realloc - 
- * @ptr: 
- * @old_size: 
- * @new_size: 
+ * _realloc - Reallocate memory for a previously allocated block.
  *
- * Return: 
+ * @ptr: Pointer to the previously allocated memory block.
+ * @old_size: The size (in bytes) of the old memory block.
+ * @new_size: The size (in bytes) of the new memory block.
+ *
+ * Return: Pointer to the reallocated memory block on success, or NULL on failure.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -56,12 +56,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 }
 
 /**
- * _reallocdp - 
- * @ptr:
- * @old_size: 
- * @new_size: 
+ * _reallocdp - Reallocate memory for an array of character pointers.
  *
- * Return: 
+ * @ptr: Pointer to the previously allocated array of character pointers.
+ * @old_size: The size (in number of pointers) of the old array.
+ * @new_size: The size (in number of pointers) of the new array.
+ *
+ * Return: Pointer to the reallocated array on success, or NULL on failure.
  */
 char **_reallocdp(char **ptr, unsigned int old_size, unsigned int new_size)
 {
