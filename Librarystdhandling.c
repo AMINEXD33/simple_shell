@@ -30,9 +30,12 @@ int get_len(int n)
 	return (lenght);
 }
 /**
- * aux_itoa - 
- * @n: 
- * Return: 
+ * aux_itoa - Converts an integer to a string.
+ *
+ * @n: The integer to be converted to a string.
+ *
+ * Return: A dynamically allocated string containing the integer as a string,
+ *         or NULL if memory allocation fails.
  */
 char *aux_itoa(int n)
 {
@@ -68,9 +71,11 @@ char *aux_itoa(int n)
 }
 
 /**
- * _atoi - 
- * @s: 
- * Return: .
+ * _atoi - Converts a string to an integer.
+ *
+ * @s: The string to be converted to an integer.
+ *
+ * Return: The integer representation of the string.
  */
 int _atoi(char *s)
 {
