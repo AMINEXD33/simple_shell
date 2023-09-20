@@ -1,10 +1,14 @@
 #include "shell.h"
 
 /**
- * swap_char - 
- * @input: 
- * @bool: 
- * Return: 
+ * swap_char - Replaces characters in a string based on a specified rule.
+ *
+ * @input: The input string to modify.
+ * @bool: A flag (0 or 1) that determines the type of character replacement:
+ *        - When bool is 0, '|' and '&' characters are replaced with 16 and 12, respectively.
+ *        - When bool is 1, characters 16 and 12 are replaced with '|' and '&', respectively.
+ *
+ * Return: A pointer to the modified input string.
  */
 char *swap_char(char *input, int bool)
 {
@@ -43,11 +47,11 @@ char *swap_char(char *input, int bool)
 }
 
 /**
- * add_nodes - 
- * @head_s: 
- * @head_l:
- * @input: 
- * Return: 
+ * add_nodes - Parses and organizes input into separator and line linked lists.
+ *
+ * @head_s: Pointer to the separator linked list.
+ * @head_l: Pointer to the line linked list.
+ * @input: The input string to parse and organize.
  */
 void add_nodes(sep_list **head_s, line_list **head_l, char *input)
 {
@@ -78,11 +82,11 @@ void add_nodes(sep_list **head_s, line_list **head_l, char *input)
 }
 
 /**
- * go_next - 
- * @list_s: 
- * @list_l: 
- * @datash: 
- * Return: 
+ * go_next - Advances through separator and line linked lists based on status.
+ *
+ * @list_s: Pointer to the separator linked list.
+ * @list_l: Pointer to the line linked list.
+ * @datash: Pointer to data related to the shell.
  */
 void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 {
@@ -119,10 +123,12 @@ void go_next(sep_list **list_s, line_list **list_l, data_shell *datash)
 }
 
 /**
- * split_commands - 
- * @datash: 
- * @input: 
- * Return: 
+ * split_commands - Executes shell commands based on separators in the input.
+ *
+ * @datash: Pointer to data related to the shell.
+ * @input: The input string containing commands and separators.
+ *
+ * Return: 0 if the loop should terminate, 1 otherwise.
  */
 int split_commands(data_shell *datash, char *input)
 {
@@ -163,9 +169,11 @@ int split_commands(data_shell *datash, char *input)
 }
 
 /**
- * split_line - 
- * @input:
- * Return: 
+ * split_line - Tokenizes a string into an array of tokens.
+ *
+ * @input: The input string to tokenize.
+ *
+ * Return: An array of tokens (strings) or NULL if memory allocation fails.
  */
 char **split_line(char *input)
 {
