@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
- * get_len - 
- * @n: 
- * Return: 
+ * get_len - Calculates the number of digits in an integer.
+ *
+ * @n: The integer for which to calculate the number of digits.
+ *
+ * Return: The number of digits in the integer.
  */
 int get_len(int n)
 {
