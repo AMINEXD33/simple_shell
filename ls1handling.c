@@ -1,12 +1,14 @@
 #include "shell.h"
 
 /**
- * add_rvar_node - 
- * @head: 
- * @lvar: 
- * @val: 
- * @lval: 
- * Return: 
+ * add_rvar_node - Adds a new node to a linked list of replaceable variables.
+ *
+ * @head: Pointer to a pointer to the head of the linked list.
+ * @lvar: The length of the variable to be added.
+ * @val: The value of the variable to be added.
+ * @lval: The length of the value of the variable to be added.
+ *
+ * Return: A pointer to the head of the updated linked list.
  */
 r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 {
@@ -38,9 +40,9 @@ r_var *add_rvar_node(r_var **head, int lvar, char *val, int lval)
 }
 
 /**
- * free_rvar_list - 
- * @head: 
- * Return: 
+ * free_rvar_list - Frees the memory allocated for a linked list of replaceable variables.
+ *
+ * @head: Pointer to a pointer to the head of the linked list.
  */
 void free_rvar_list(r_var **head)
 {
