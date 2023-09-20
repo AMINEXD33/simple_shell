@@ -71,3 +71,31 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - Create an AUTHORS file at the root of your repository to list all contributors to the repository (following a specified format).
 
 By meeting these requirements, you will demonstrate your understanding of shell programming and best practices in Unix-based development.
+
+
+# USAGE
+
+## It is as simple as:
+#### compile the file : `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+#### and start interacting with the shell
+
+#### example:
+```bash
+  $ls
+```
+```bash
+  $ ls
+  builin.c                       handling.c            main.c
+  changingDirhandling.c          handling_one.c        mutsara.c
+  changingDir_handling_getzAl.c  help__1.c             Paper.c
+  checkvsynt.c                   hsh                   pfhandling.c
+  cmd.c                          intsiggetz.c          README.md
+  envhandleone.c                 ita_c.c               shell.h
+  envhandletwo.c                 kumisa.c              shell_Loops.c
+  err_get.c                      Librarystdhandling.c  str001handling.c
+  errhandling001.c               line.c                str002handling.c
+  errhandling002.c               ls_01_handling.c      str003handling.c
+  extrem_var_chek.c              ls1handling.c
+  $ 
+
+```
