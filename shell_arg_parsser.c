@@ -76,7 +76,7 @@ struct TOKEN_LIST *main_parsser(char *main_buffer, struct TOKEN_LIST *list)
  */
 struct TOKEN_LIST *alloc_args_list(struct TOKEN_LIST *list)
 {
-	int args_count2;/*track position*/
+	int args_count2, i;/*track position*/
 
 	args_count2 = 0;
 	/*malloc the width of the list*/
@@ -96,7 +96,7 @@ struct TOKEN_LIST *alloc_args_list(struct TOKEN_LIST *list)
 		list->token_list[args_count2] = malloc(sizeof(char) * list->max_len + 1);
 		if (list->token_list[args_count2] == NULL)
 		{
-			for (int i = 0; i < args_count2; i++)
+			for (i = 0; i < args_count2; i++)
 			{
 				free(list->token_list[i]);
 			}

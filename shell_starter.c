@@ -27,7 +27,7 @@ struct TOKEN_LIST *make_list(struct TOKEN_LIST *list)
  * shell_start- is the user interface fucntion(prompt)
  * @Pname: the programe name
  */
-void shell_start(char *Pname)
+void shell_start(void)
 {
 	char main_buffer[3024];
 	struct TOKEN_LIST *list = NULL;
@@ -80,7 +80,7 @@ int main(int argc, char **argv)
 	char *path = NULL;
 	/*if the user didnt enter any args directlly >> prompt mode*/
 	if (argc <= 1)
-		shell_start(argv[0]);
+		shell_start();
 	/*if the user entered some args >> EXECUTE directly*/
 	else
 	{
