@@ -29,7 +29,7 @@ typedef struct built_in_command_functions
 	void (*func)(struct TOKEN_LIST *list);
 } BCF;
 
-void shell_start(char *Pname);
+void shell_start();
 
 struct TOKEN_LIST *make_list(struct TOKEN_LIST *list);
 

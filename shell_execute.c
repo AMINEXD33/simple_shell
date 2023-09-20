@@ -15,6 +15,7 @@
  */
 char *check_command(char *command)
 {
+	char *path_copy;
 	char *path = getenv("PATH");
 	char *dir = NULL;
 	char *command_path = NULL;
@@ -26,7 +27,7 @@ char *check_command(char *command)
 		fprintf(stderr, "Error: %s\n", strerror(errno));
 		return (NULL);
 	}
-	char *path_copy = strdup(path);
+	path_copy = strdup(path);
 
 	if (path_copy == NULL)
 		return (NULL);
