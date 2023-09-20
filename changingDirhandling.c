@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * cd_shell - 
- * @datash: 
- * Return: 
+ * cd_shell - Change the current working directory based on user input and update environment variables
+ *
+ * @datash: Pointer to the data_shell structure
+ * Return: Always returns 1 (indicating success)
  */
 int cd_shell(data_shell *datash)
 {

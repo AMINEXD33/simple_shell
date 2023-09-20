@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * exit_shell - 
+ * exit_shell - Exit the shell with a specified status code.
  *
- * @datash: 
- * Return: 
+ * @datash: Pointer to the data_shell struct.
+ * Return: 0 if the status code was set successfully, 1 if there was an error.
  */
 int exit_shell(data_shell *datash)
 {

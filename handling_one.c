@@ -1,8 +1,12 @@
 #include "shell.h"
 
 /**
- * aux_help - 
- * Return:
+ * aux_help - Display help information for the 'help' command.
+ *
+ * This function displays help information for the 'help' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help(void)
 {
@@ -15,8 +19,12 @@ void aux_help(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_alias - 
- * Return: 
+ * aux_help_alias - Display help information for the 'alias' command.
+ *
+ * This function displays help information for the 'alias' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_alias(void)
 {
@@ -27,8 +35,12 @@ void aux_help_alias(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_cd - 
- * Return: 
+ * aux_help_cd - Display help information for the 'cd' command.
+ *
+ * This function displays help information for the 'cd' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_cd(void)
 {

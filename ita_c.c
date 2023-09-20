@@ -1,10 +1,11 @@
 #include "shell.h"
 
 /**
- * is_cdir - 
- * @path: 
- * @i: 
- * Return: 
+ * is_cdir - Check if a character in a string is a colon ':'.
+ * @path: The string to check.
+ * @i: Pointer to the current index in the string.
+ *
+ * Return: 1 if the character is a colon, 0 otherwise.
  */
 int is_cdir(char *path, int *i)
 {
@@ -23,10 +24,11 @@ int is_cdir(char *path, int *i)
 }
 
 /**
- * _which - 
- * @cmd: 
- * @_environ: 
- * Return: 
+ * _which - Locate a command in the PATH environment variable.
+ * @cmd: The command to locate.
+ * @_environ: The environment variable.
+ *
+ * Return: A pointer to the full path of the command, or NULL if not found.
  */
 char *_which(char *cmd, char **_environ)
 {
@@ -71,10 +73,13 @@ char *_which(char *cmd, char **_environ)
 	return (NULL);
 }
 
+
 /**
- * is_executable - 
- * @datash: 
- * Return: 
+ * is_executable - Check if a command is executable.
+ * @datash: Pointer to the data_shell struct.
+ *
+ * Return: The index where the executable part starts in the command string,
+ *         or -1 if the command is not executable.
  */
 int is_executable(data_shell *datash)
 {
@@ -116,10 +121,11 @@ int is_executable(data_shell *datash)
 }
 
 /**
- * check_error_cmd - 
- * @dir: 
- * @datash: 
- * Return: 
+ * check_error_cmd - Check for errors in the command execution.
+ * @dir: The directory or command path.
+ * @datash: Pointer to the data_shell struct.
+ *
+ * Return: 1 if there is an error, 0 otherwise.
  */
 int check_error_cmd(char *dir, data_shell *datash)
 {
@@ -152,9 +158,10 @@ int check_error_cmd(char *dir, data_shell *datash)
 }
 
 /**
- * cmd_exec - 
- * @datash: 
- * Return: 
+ * cmd_exec - Execute a command.
+ * @datash: Pointer to the data_shell struct.
+ *
+ * Return: 1 if the command was executed successfully, 0 otherwise.
  */
 int cmd_exec(data_shell *datash)
 {

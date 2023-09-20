@@ -1,8 +1,12 @@
 #include "shell.h"
 
 /**
- * aux_help_env - 
- * Return: 
+ * aux_help_env - Display help information for the 'env' command.
+ *
+ * This function displays help information for the 'env' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_env(void)
 {
@@ -14,8 +18,12 @@ void aux_help_env(void)
 
 }
 /**
- * aux_help_setenv -
- * Return: 
+ * aux_help_setenv - Display help information for the 'setenv' command.
+ *
+ * This function displays help information for the 'setenv' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_setenv(void)
 {
@@ -29,8 +37,12 @@ void aux_help_setenv(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_unsetenv -
- * Return: 
+ * aux_help_unsetenv - Display help information for the 'unsetenv' command.
+ *
+ * This function displays help information for the 'unsetenv' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_unsetenv(void)
 {
@@ -40,15 +52,17 @@ void aux_help_unsetenv(void)
 	help = "Remove an entry completely from the environment\n";
 	write(STDOUT_FILENO, help, _strlen(help));
 }
-
-
 /**
- * aux_help_general - 
- * Return: 
+ * aux_help_general - Display general help information for the shell.
+ *
+ * This function displays general help information for the shell, providing
+ * an overview of available commands and their usage.
+ *
+ * Return: void
  */
 void aux_help_general(void)
 {
-	char *help = "^-^ bash, version 1.0(1)-release\n";
+	char *help = "bash, version 1.0(1)-release\n";
 
 	write(STDOUT_FILENO, help, _strlen(help));
 	help = "These commands are defined internally.Type 'help' to see the list";
@@ -65,8 +79,12 @@ void aux_help_general(void)
 	write(STDOUT_FILENO, help, _strlen(help));
 }
 /**
- * aux_help_exit - 
- * Return: 
+ * aux_help_exit - Display help information for the 'exit' command.
+ *
+ * This function displays help information for the 'exit' command, explaining
+ * its usage and purpose.
+ *
+ * Return: void
  */
 void aux_help_exit(void)
 {

@@ -1,11 +1,16 @@
 #include "shell.h"
 
 /**
- * check_env - 
- * @h: 
- * @in: 
- * @data: 
- * Return: 
+ * check_env - Check for environment variable references in input.
+ *
+ * This function searches for environment variable references in the input string
+ * and adds them to the linked list of r_var structures.
+ *
+ * @h: Pointer to the head of the r_var linked list.
+ * @in: The input string to check.
+ * @data: Pointer to the data_shell structure.
+ *
+ * Return: void
  */
 void check_env(r_var **h, char *in, data_shell *data)
 {
@@ -41,12 +46,17 @@ void check_env(r_var **h, char *in, data_shell *data)
 }
 
 /**
- * check_vars - 
- * @h:
- * @in: 
- * @st: 
- * @data: 
- * Return:
+ * check_vars - Check for special variables in input and add them to the list.
+ *
+ * This function checks for the presence of special variables in the input string
+ * and adds them to the linked list of r_var structures.
+ *
+ * @h: Pointer to the head of the r_var linked list.
+ * @in: The input string to check.
+ * @st: The special variable string.
+ * @data: Pointer to the data_shell structure.
+ *
+ * Return: The number of characters processed.
  */
 int check_vars(r_var **h, char *in, char *st, data_shell *data)
 {
@@ -82,13 +92,18 @@ int check_vars(r_var **h, char *in, char *st, data_shell *data)
 }
 
 /**
- * replaced_input - 
+ * replaced_input - Replace variables in input with their values.
  *
- * @head:
- * @input: 
- * @new_input: 
- * @nlen: 
- * Return: 
+ * This function replaces variables in the input string with their corresponding
+ * values from the linked list of r_var structures and stores the result in a new
+ * input buffer.
+ *
+ * @head: Pointer to the head of the r_var linked list.
+ * @input: The original input string.
+ * @new_input: The buffer to store the replaced input.
+ * @nlen: The length of the new input buffer.
+ *
+ * Return: A pointer to the new input buffer.
  */
 char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
 {
@@ -134,11 +149,15 @@ char *replaced_input(r_var **head, char *input, char *new_input, int nlen)
 }
 
 /**
- * rep_var - 
+ * rep_var - Replace variables in input with their values.
  *
- * @input: 
- * @datash: 
- * Return: 
+ * This function replaces variables in the input string with their corresponding
+ * values and returns the modified input string.
+ *
+ * @input: The input string to be processed.
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the modified input string or NULL on memory allocation failure.
  */
 char *rep_var(char *input, data_shell *datash)
 {

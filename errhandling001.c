@@ -1,12 +1,17 @@
 #include "shell.h"
 
 /**
- * strcat_cd - 
- * @datash: 
- * @msg: 
- * @error: 
- * @ver_str: 
- * Return: 
+ * strcat_cd - Concatenate strings to form a CD error message.
+ *
+ * This function constructs an error message for the "cd" command based on the
+ * provided parameters and returns the formatted error message.
+ *
+ * @datash: Pointer to the data_shell structure.
+ * @msg: The message part of the error.
+ * @error: The character buffer to store the error message.
+ * @ver_str: The string representation of the command execution counter.
+ *
+ * Return: A pointer to the formatted error message.
  */
 char *strcat_cd(data_shell *datash, char *msg, char *error, char *ver_str)
 {
@@ -38,9 +43,14 @@ char *strcat_cd(data_shell *datash, char *msg, char *error, char *ver_str)
 }
 
 /**
- * error_get_cd - 
- * @datash: 
- * Return: 
+ * error_get_cd - Create a "cd" command error message.
+ *
+ * This function generates an error message for the "cd" command, specifically
+ * when an illegal option or an invalid directory is provided as an argument.
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the generated error message or NULL on memory allocation failure.
  */
 char *error_get_cd(data_shell *datash)
 {
@@ -77,9 +87,15 @@ char *error_get_cd(data_shell *datash)
 }
 
 /**
- * error_not_found - 
- * @datash:
- * Return: 
+ * error_not_found - Create a "command not found" error message.
+ *
+ * This function generates an error message for when a command is not found in the
+ * shell's execution path.
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the generated "command not found" error message or NULL
+ *         on memory allocation failure.
  */
 char *error_not_found(data_shell *datash)
 {
@@ -109,10 +125,15 @@ char *error_not_found(data_shell *datash)
 }
 
 /**
- * error_exit_shell -
- * @datash: 
+ * error_exit_shell - Create an "illegal number" error message for "exit" command.
  *
- * Return: 
+ * This function generates an error message for the "exit" command when an illegal
+ * number is provided as an argument.
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the generated "illegal number" error message or NULL on
+ *         memory allocation failure.
  */
 char *error_exit_shell(data_shell *datash)
 {

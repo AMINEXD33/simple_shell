@@ -1,9 +1,15 @@
 #include "shell.h"
 
 /**
- * error_env - 
- * @datash: 
- * Return: 
+ * error_env - Create an "environment modification" error message.
+ *
+ * This function generates an error message for cases where the shell is unable
+ * to add or remove environment variables.
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the generated "environment modification" error message or
+ *         NULL on memory allocation failure.
  */
 char *error_env(data_shell *datash)
 {
@@ -36,10 +42,15 @@ char *error_env(data_shell *datash)
 	return (error);
 }
 /**
- * error_path_126 - 
- * @datash: 
+ * error_path_126 - Create a "permission denied" error message for 126 code.
  *
- * Return: 
+ * This function generates an error message for when a command is found but the
+ * shell is unable to execute it due to permission issues (error code 126).
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: A pointer to the generated "permission denied" error message or NULL
+ *         on memory allocation failure.
  */
 char *error_path_126(data_shell *datash)
 {

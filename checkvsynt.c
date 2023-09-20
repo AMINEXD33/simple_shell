@@ -1,10 +1,11 @@
 #include "shell.h"
 
 /**
- * repeated_char - 
- * @input: 
- * @i: 
- * Return: 
+ * repeated_char - Count repeated consecutive characters in a string
+ *
+ * @input: The input string
+ * @i: Current index in the string
+ * Return: The count of consecutive repeated characters
  */
 int repeated_char(char *input, int i)
 {
@@ -15,11 +16,12 @@ int repeated_char(char *input, int i)
 }
 
 /**
- * error_sep_op - 
- * @input: 
- * @i: 
- * @last: 
- * Return: 
+ * error_sep_op - Check for syntax errors related to separator operators
+ *
+ * @input: The input string
+ * @i: Current index in the string
+ * @last: Last character encountered
+ * Return: The index of the error or 0 if no error is found
  */
 int error_sep_op(char *input, int i, char last)
 {
@@ -66,10 +68,11 @@ int error_sep_op(char *input, int i, char last)
 }
 
 /**
- * first_char - 
- * @input: 
- * @i:
- * Return: 
+ * first_char - Find the first non-whitespace character in a string
+ *
+ * @input: The input string
+ * @i: Pointer to an integer storing the index of the first character
+ * Return: 0 if a valid character is found, -1 if a separator is encountered
  */
 int first_char(char *input, int *i)
 {
@@ -88,12 +91,13 @@ int first_char(char *input, int *i)
 }
 
 /**
- * print_syntax_error - 
- * @datash: 
- * @input: 
- * @i: 
- * @bool: 
- * Return: 
+ * print_syntax_error - Print a syntax error message to STDERR
+ *
+ * @datash: Pointer to the data_shell structure
+ * @input: The input string
+ * @i: Index of the error in the input string
+ * @bool: Boolean indicating whether the error is repeated
+ * Return: No return value
  */
 void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 {
@@ -140,10 +144,11 @@ void print_syntax_error(data_shell *datash, char *input, int i, int bool)
 }
 
 /**
- * check_syntax_error - 
- * @datash: 
- * @input: 
- * Return: 
+ * check_syntax_error - Check for syntax errors in the input string
+ *
+ * @datash: Pointer to the data_shell structure
+ * @input: The input string
+ * Return: 0 if no syntax error is found, 1 if an error is detected
  */
 int check_syntax_error(data_shell *datash, char *input)
 {

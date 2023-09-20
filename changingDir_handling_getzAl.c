@@ -1,9 +1,10 @@
 #include "shell.h"
 
 /**
- * cd_dot - 
- * @datash: 
- * Return: 
+ * cd_dot - Change the current working directory based on '.' and update environment variables
+ *
+ * @datash: Pointer to the data_shell structure
+ * Return: No return value
  */
 void cd_dot(data_shell *datash)
 {
@@ -50,10 +51,10 @@ void cd_dot(data_shell *datash)
 }
 
 /**
- * cd_to - 
+ * cd_to - Change the current working directory to the specified directory and update environment variables
  *
- * @datash: 
- * Return: 
+ * @datash: Pointer to the data_shell structure
+ * Return: No return value
  */
 void cd_to(data_shell *datash)
 {
@@ -84,10 +85,10 @@ void cd_to(data_shell *datash)
 }
 
 /**
- * cd_previous - 
+ * cd_previous - Change the current working directory to the previous directory and update environment variables
  *
- * @datash: 
- * Return: 
+ * @datash: Pointer to the data_shell structure
+ * Return: No return value
  */
 void cd_previous(data_shell *datash)
 {
@@ -126,10 +127,10 @@ void cd_previous(data_shell *datash)
 }
 
 /**
- * cd_to_home - 
+ * cd_to_home - Change the current working directory to the user's home directory and update environment variables
  *
- * @datash: 
- * Return: 
+ * @datash: Pointer to the data_shell structure
+ * Return: No return value
  */
 void cd_to_home(data_shell *datash)
 {

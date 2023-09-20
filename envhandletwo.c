@@ -1,11 +1,17 @@
 #include "shell.h"
 
 /**
- * copy_info - 
- * @name: 
- * @value: 
+ * copy_info - Create a new environment variable string.
  *
- * Return: 
+ * This function takes a `name` and a `value` and combines them into a new
+ * environment variable string in the format "name=value". It allocates memory
+ * for the new string and returns it.
+ *
+ * @name: The name part of the environment variable.
+ * @value: The value part of the environment variable.
+ *
+ * Return: A pointer to the newly created environment variable string.
+ *         NULL is returned if memory allocation fails.
  */
 char *copy_info(char *name, char *value)
 {
@@ -25,12 +31,18 @@ char *copy_info(char *name, char *value)
 }
 
 /**
- * set_env - 
+ * set_env - Set or update an environment variable.
  *
- * @name: 
- * @value: 
- * @datash: 
- * Return: 
+ * This function sets or updates an environment variable with the specified `name`
+ * and `value` in the `datash->_environ` array. If the variable exists, it updates
+ * its value; otherwise, it creates a new variable. Memory management for the
+ * `_environ` array is handled accordingly.
+ *
+ * @name: The name of the environment variable to set/update.
+ * @value: The value of the environment variable.
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: No return value.
  */
 void set_env(char *name, char *value, data_shell *datash)
 {
@@ -57,10 +69,16 @@ void set_env(char *name, char *value, data_shell *datash)
 }
 
 /**
- * _setenv - 
- * @datash: 
+ * _setenv - Set or update an environment variable.
  *
- * Return: 
+ * This function is a wrapper for the `set_env` function. It sets or updates an
+ * environment variable based on the arguments provided in the `datash->args`
+ * array. It checks for the presence of required arguments and handles the
+ * environment variable accordingly.
+ *
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: Always returns 1 (indicating success).
  */
 int _setenv(data_shell *datash)
 {
@@ -77,11 +95,15 @@ int _setenv(data_shell *datash)
 }
 
 /**
- * _unsetenv - 
+ * _unsetenv - Unset an environment variable.
  *
- * @datash: 
+ * This function removes an environment variable specified by name in the
+ * `datash->args` array from the `datash->_environ` array. It reallocates
+ * memory as needed and updates the environment variables accordingly.
  *
- * Return: 
+ * @datash: Pointer to the data_shell structure.
+ *
+ * Return: Always returns 1 (indicating success).
  */
 int _unsetenv(data_shell *datash)
 {

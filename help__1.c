@@ -1,10 +1,17 @@
 #include "shell.h"
 
 /**
- * get_help - 
- * @datash: 
- * Return: 
-*/
+ * get_help - Display help information for shell built-in commands.
+ *
+ * This function displays help information for shell built-in commands based on
+ * the provided command-line arguments. If no arguments are provided, it displays
+ * general help information. If an invalid command is given, it writes an error
+ * message to the standard error output.
+ *
+ * @datash: A pointer to the data_shell structure.
+ *
+ * Return: Always returns 1.
+ */
 int get_help(data_shell *datash)
 {
 
