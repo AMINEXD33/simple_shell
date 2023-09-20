@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * rev_string - 
- * @s: 
- * Return: 
+ * rev_string - Reverse a string in place.
+ *
+ * @s: The string to be reversed.
  */
 void rev_string(char *s)
 {
