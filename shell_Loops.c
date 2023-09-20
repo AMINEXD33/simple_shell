@@ -1,9 +1,11 @@
 #include "shell.h"
 
 /**
- * without_comment - 
- * @in: 
- * Return: 
+ * without_comment - Remove comments from a string.
+ *
+ * @in: The input string potentially containing comments.
+ *
+ * Return: A modified string with comments removed or NULL on error.
  */
 char *without_comment(char *in)
 {
@@ -34,10 +36,9 @@ char *without_comment(char *in)
 }
 
 /**
- * shell_loop - 
- * @datash: 
+ * shell_loop - Main loop for the shell to read, parse, and execute commands.
  *
- * Return: 
+ * @datash: Pointer to the data_shell structure containing shell data.
  */
 void shell_loop(data_shell *datash)
 {
