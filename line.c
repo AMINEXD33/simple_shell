@@ -1,11 +1,12 @@
 #include "shell.h"
 
 /**
- * bring_line - 
- * @lineptr: 
- * @buffer: 
- * @n: 
- * @j: 
+ * bring_line - Updates a line pointer and size based on input buffer and length.
+ *
+ * @lineptr: Pointer to a pointer to a line buffer.
+ * @n: Pointer to the size of the line buffer.
+ * @buffer: The input buffer to be assigned to lineptr.
+ * @j: The length of the input buffer.
  */
 void bring_line(char **lineptr, size_t *n, char *buffer, size_t j)
 {
@@ -34,11 +35,13 @@ void bring_line(char **lineptr, size_t *n, char *buffer, size_t j)
 	}
 }
 /**
- * get_line - 
- * @lineptr: 
- * @n: 
- * @stream: 
- * Return: 
+ * get_line - Reads a line from a stream and stores it in a dynamically allocated buffer.
+ *
+ * @lineptr: Pointer to a pointer that will store the read line.
+ * @n: Pointer to the size of the line buffer.
+ * @stream: The input stream to read from (e.g., stdin).
+ *
+ * Return: The number of bytes read, or -1 on failure or end of file.
  */
 ssize_t get_line(char **lineptr, size_t *n, FILE *stream)
 {
