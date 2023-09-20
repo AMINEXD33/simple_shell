@@ -1,10 +1,12 @@
 #include "shell.h"
 
 /**
- * _strcat -
- * @dest: 
- * @src: 
- * Return: 
+ * _strcat - Concatenate two strings.
+ *
+ * @dest: The destination string to append to.
+ * @src: The source string to append.
+ *
+ * Return: Pointer to the destination string (dest).
  */
 char *_strcat(char *dest, const char *src)
 {
@@ -24,10 +26,12 @@ char *_strcat(char *dest, const char *src)
 	return (dest);
 }
 /**
- * *_strcpy - 
- * @dest: 
- * @src:
- * Return: 
+ * _strcpy - Copy a string.
+ *
+ * @dest: The destination string to copy to.
+ * @src: The source string to copy.
+ *
+ * Return: Pointer to the destination string (dest).
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -42,10 +46,12 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * _strcmp - 
- * @s1: 
- * @s2:
- * Return: 
+ * _strcmp - Compare two strings.
+ *
+ * @s1: The first string.
+ * @s2: The second string.
+ *
+ * Return: 0 if strings are equal, 1 if s1 is greater, -1 if s2 is greater.
  */
 int _strcmp(char *s1, char *s2)
 {
@@ -61,10 +67,12 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 /**
- * _strchr - 
- * @s: 
- * @c: 
- * Return: 
+ * _strchr - Locate character in a string.
+ *
+ * @s: The string to search.
+ * @c: The character to locate.
+ *
+ * Return: Pointer to the first occurrence of c in s, or NULL if not found.
  */
 char *_strchr(char *s, char c)
 {
@@ -78,10 +86,13 @@ char *_strchr(char *s, char c)
 	return ('\0');
 }
 /**
- * _strspn -
- * @s: 
- * @accept: 
- * Return: 
+ * _strspn - Get length of a prefix substring.
+ *
+ * @s: The string to be searched.
+ * @accept: The characters to match.
+ *
+ * Return: Number of bytes in the initial segment of s which consist
+ * only of bytes from accept.
  */
 int _strspn(char *s, char *accept)
 {
